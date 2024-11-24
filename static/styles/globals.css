@@ -1,0 +1,7 @@
+:root {
+    --background: rgb(30, 30, 30);
+    --secondary: rgb(76, 76, 76);
+    --text: rgb(184, 184, 184);
+    --text-light: rgb(237, 237, 237);
+    --accent-secondary: rgba(30, 143, 255, 0.374);
+}

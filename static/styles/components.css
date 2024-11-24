@@ -1,0 +1,105 @@
+.fc-timegrid-event {
+    margin: 0;
+    border: none;
+    box-shadow: none !important;
+    width: 100%;
+    background: var(--accent-secondary);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.label {
+    margin-bottom: 0.2rem;
+}
+
+.modal {
+    position: relative;
+    background: var(--background);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fc-scrollgrid-sync-inner {
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.fc .fc-timegrid-slot-minor {
+    border: none !important;
+}
+
+.fc td {
+    border-color: var(--secondary) !important;
+    border-style: none solid none none !important;
+    border-width: 1px !important;
+    padding: 0 !important;
+    vertical-align: top !important;
+}
+
+
+.fc tr:nth-child(even) td:first-child {
+    border-color: var(--secondary) !important;
+    border-width: 1px !important;
+    border-style: dashed none solid none !important;
+}
+
+.fc-direction-ltr .fc-timegrid-slot-label-frame {
+    text-align: center;
+}
+
+.fc .fc-button-primary {
+    background: var(--accent) !important;
+    color: var(--text);
+    border: solid 1px var(--accent) !important;
+    border-radius: 5px;
+}
+
+.delete-button {
+    color: red !important;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    background: transparent;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+    color: red !important;
+}
+
+#calendar {
+    border: solid 1px var(--secondary);
+    border-style: none none solid none;
+    height: 90%;
+}
+
+.auto-width {
+    flex-shrink: 0;
+    white-space: normal;
+}
+
+.disabled {
+    background: var(--secondary) !important;
+    cursor: not-allowed;
+}
+
+.content {
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
+
+    body {
+        overflow-x: auto;
+    }
+
+    .modal {
+        width: 80%;
+    }
+}

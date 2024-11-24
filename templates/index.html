@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>UseMotion Calendar Clone</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://lib.cadenchau.com/styles/minimalistic.css">
+        <link rel="stylesheet" href="/static/styles/globals.css">
+        <link rel="stylesheet" href="/static/styles/style.css">
+        <link rel="stylesheet" href="/static/styles/components.css">
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+        <script src="https://lib.cadenchau.com/lib.js"></script>
+        <script src="/static/scripts/index-load.js"></script>
+    </head>
+    <body class="centered-horizontally">
+        <div class="modal-background centered-children" id="modal" style="display: none">
+            <div class="modal">
+                <h3>Create Event</h3>
+                <div>
+                    <div class="label">Name</div>
+                    <input id="eventName" type="text" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="horizontal-container">
+                    <button class="primary-button-solid" onclick="createNewEvent()">Create</button>
+                    <button class="secondary-button" onclick="animateCloseModal(dquery('#modal'))">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-background centered-children" id="aiModal" style="display: none">
+            <div class="modal">
+                <h3>Prompt</h3>
+                <input id="prompt" type="text" autocomplete="off" spellcheck="false">
+                <div class="horizontal-container">
+                    <button class="primary-button-solid" onclick="generateAI()" id="ai-button"">Generate</button>
+                    <button class="secondary-button" onclick="animateCloseModal(dquery('#aiModal'))">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-background centered-children" id="editModal" style="display: none">
+            <div class="modal">
+                <div class="centered-vertically">
+                    <h3>Edit Event</h3>
+                    <button class="delete-button" onclick="deleteEvent()">Delete</button>
+                </div>
+                <div>
+                    <div class="label">Name</div>
+                    <input id="editEventName" type="text" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="horizontal-container">
+                    <button class="primary-button-solid" onclick="editEvent()">Save</button>
+                    <button class="secondary-button" onclick="animateCloseModal(dquery('#editModal'))">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id='calendar'></div>
+            <div class="break"></div>
+            <div class="horizontal-container" style="gap: 1rem">
+                <button class="primary-button-solid" onclick="animateOpenModal(dquery('#modal'))">Create Task</button>
+                <button class="primary-button-solid auto-width" onclick="animateOpenModal(dquery('#aiModal'))">✨ Generate with AI</button>
+            </div>
+        </div>
+    </body>
+</html>

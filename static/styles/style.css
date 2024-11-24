@@ -1,0 +1,40 @@
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "Inter";
+    user-select: none;
+    overflow-x: hidden;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+button {
+    color: white !important;
+}
+
+* {
+    border-color: var(--secondary) !important;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+input {
+    background: transparent;
+    color: var(--text);
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    border: solid 1px var(--secondary);
+    border-style: none none none solid;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #AAAAAA;
+}
